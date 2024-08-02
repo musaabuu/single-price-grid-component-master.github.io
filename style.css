@@ -1,0 +1,149 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+li {
+    list-style: none;
+}
+
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --cyan-var: 179, 62%, 43%;
+    --bright-yellow: hsl(71, 73%, 54%);
+    --bright-yellow-var: 71, 73%, 54%;
+    --light-gray: hsl(204, 43%, 93%);
+    --light-gray-var: 204, 43%, 93%;
+    --grayish-blue: hsl(218, 22%, 67%);
+    --grayish-blue-var: 218, 22%, 67%;
+}
+
+body {
+    height: 100vh;
+    font-family: "Karla";
+    background-color: var(--light-gray);
+    place-content: center;
+}
+
+.wrapper {
+    margin-inline: auto;
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: .5rem;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.grid-span-2 {
+    grid-column: span 2;
+}
+
+.head-title,
+.sign-up,
+.why-us {
+    padding: 2.5rem;
+}
+
+.head-title {
+    display: grid;
+    gap: 1rem;
+}
+
+.head-title > h1 {
+    color: var(--cyan);
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.head-title > .paragraph {
+    display: grid;
+    gap: .5rem;
+}
+
+.head-title > .paragraph > h2 {
+    color: var(--bright-yellow);
+}
+
+.head-title > .paragraph > p {
+    color: var(--grayish-blue);
+    font-weight: bold;
+}
+
+.sign-up {
+    background-color: var(--cyan);
+    color: white;
+    display: grid;
+    gap: 2rem;
+}
+
+.sign-up > h2 {
+    font-size: 1.5rem;
+}
+
+.sign-up > .paragraph {
+    display: grid;
+    gap: .5rem;
+}
+
+.sign-up > .paragraph p > span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.sign-up > .paragraph p:first-child {
+    color: var(--light-gray);   
+}
+
+.sign-up > .paragraph p:last-child {
+    color: var(--light-gray);
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.button {
+    border: 0;
+    outline: 0;
+    border-radius: .25rem;
+    background-color: var(--bright-yellow);
+    width: 100%;
+    padding-blocK: 1rem;
+    color: white;
+    font-size: 1rem;
+    box-shadow: 0px 8px 1rem 0px rgb(0 0 0 / .2);
+}
+
+.why-us {
+    background-color: hsl(179, 59%, 46%);
+    display: grid;
+    gap: 1rem;
+}
+
+.why-us > h2 {
+    color: white;
+}
+
+.why-us li {
+    color: var(--light-gray);
+}
+
+@media (max-width: 750px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        border-radius: unset;
+    }
+
+    .wrapper > * {
+        flex: 1;
+    }
+
+}
